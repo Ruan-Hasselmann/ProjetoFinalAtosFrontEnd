@@ -1,0 +1,52 @@
+<mat-card class="card">
+    <mat-card-title>Alterar cliente</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" [(ngModel)]="cliente.nome" name="nome" required>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Cpf" [(ngModel)]="cliente.cpf" name="cpf" mask="000.000.000-00" [dropSpecialCharacters]="false" required>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Rg" [(ngModel)]="cliente.rg" name="rg" mask="0000000000" [dropSpecialCharacters]="false" required>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Celular" [(ngModel)]="cliente.celular" name="celular" mask="(00) 00000-0000" [dropSpecialCharacters]="false" required>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Telefone" [(ngModel)]="cliente.telefone" name="telefone" mask="(00) 0000-0000" [dropSpecialCharacters]="false">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Cep" [(ngModel)]="cliente.cep" name="cep" mask="00000-000" [dropSpecialCharacters]="false">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Rua" [(ngModel)]="cliente.logradouro" name="rua" required>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Nº" [(ngModel)]="cliente.numeroCasa" name="numeroCasa" required>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Bairro" [(ngModel)]="cliente.bairro" name="bairro" required>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Cidade" [(ngModel)]="cliente.localidade" name="cidade">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Uf" [(ngModel)]="cliente.uf" name="uf" mask="SS" [dropSpecialCharacters]="false">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Data para pagamento" [(ngModel)]="cliente.dataCobranca" name="dataCobranca" mask="00/00/0000" [dropSpecialCharacters]="false" required>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Novo Total" [(ngModel)]="cliente.total" name="total" mask="0*.00" [dropSpecialCharacters]="false" required>
+        </mat-form-field>
+    </form>
+</mat-card>
+
+<button mat-raised-button (click)="updateCliente()" color="primary">
+    Atualizar
+</button>
+
+<button mat-raised-button (click)="cancel()">
+    Cancelar
+</button>

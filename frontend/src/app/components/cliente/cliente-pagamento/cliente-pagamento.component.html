@@ -1,0 +1,19 @@
+<mat-card class="card">
+    <mat-card-title>Alterar cliente</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Data para o proximo pagamento" [(ngModel)]="cliente.dataCobranca" name="dataCobranca" mask="00/00/0000" [dropSpecialCharacters]="false" required>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Valor pago" [(ngModel)]="cliente.pago" name="pago" mask="0*.00" [dropSpecialCharacters]="false" required>
+        </mat-form-field>
+    </form>
+</mat-card>
+
+<button mat-raised-button (click)="pagamentoCliente()" color="primary">
+    Salvar
+</button>
+
+<button mat-raised-button (click)="cancel()">
+    Cancelar
+</button>

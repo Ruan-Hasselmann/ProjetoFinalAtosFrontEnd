@@ -1,0 +1,46 @@
+<mat-card>
+    <mat-card-title>Alterar vendedor</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" [(ngModel)]="vendedor.nome" name="nome">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Cpf" [(ngModel)]="vendedor.cpf" name="cpf" mask="000.000.000-00" [dropSpecialCharacters]="false">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Rg" [(ngModel)]="vendedor.rg" name="rg" mask="0000000000" [dropSpecialCharacters]="false">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Celular" [(ngModel)]="vendedor.celular" name="celular" mask="(00) 00000-0000" [dropSpecialCharacters]="false">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Telefone" [(ngModel)]="vendedor.telefone" name="telefone" mask="(00) 0000-0000" [dropSpecialCharacters]="false">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Cep" [(ngModel)]="vendedor.cep" name="cep" mask="00000-000" [dropSpecialCharacters]="false">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Rua" [(ngModel)]="vendedor.logradouro" name="rua">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Nº" [(ngModel)]="vendedor.numeroCasa" name="numeroCasa">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Bairro" [(ngModel)]="vendedor.bairro" name="bairro">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Cidade" [(ngModel)]="vendedor.localidade" name="cidade">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Uf" [(ngModel)]="vendedor.uf" name="uf" mask="SS" [dropSpecialCharacters]="false">
+        </mat-form-field>
+    </form>
+</mat-card>
+
+<button mat-raised-button (click)="updateVendedor()" color="primary">
+    Atualizar
+</button>
+
+<button mat-raised-button (click)="cancel()">
+    Cancelar
+</button>

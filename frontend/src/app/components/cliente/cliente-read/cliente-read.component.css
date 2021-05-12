@@ -1,0 +1,23 @@
+table {
+  width: 100%;
+}
+
+.edit > i {
+  color: #d9cd26;
+}
+
+.delete > i {
+  color: #e35e6b
+}
+
+.money > i {
+  color: #00ff00;
+}
+
+.edit {
+  margin: 0px 10px 0px 10px;
+}
+
+.destaque {
+  color: #000000;
+}
