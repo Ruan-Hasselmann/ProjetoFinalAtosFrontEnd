@@ -32,6 +32,9 @@ export class VendedorCreateComponent implements OnInit {
 
   pesquisacep(value: string): void{
     this.vendedorService.buscarCep(value).subscribe(vendedor => {
+      if(vendedor.cep==undefined){
+        alert('Cep Invalido!')
+      }
       this.vendedor.logradouro = vendedor.logradouro
       this.vendedor.bairro = vendedor.bairro
       this.vendedor.localidade = vendedor.localidade
